@@ -17,7 +17,7 @@ var subpy = null;
 app.on('ready', function() {
 	
 	// spawn server
-	subpy = require('child_process').spawn('python', [__dirname + '/web_app/run_app.py']);
+	subpy = require('child_process').spawn('python', [__dirname + '/flask/app.py']);
 
   // Create the browser mainWindow
   mainWindow = new BrowserWindow({
@@ -33,7 +33,7 @@ app.on('ready', function() {
   });
 
     // Load the index page
-    mainWindow.loadURL('http://localhost:4040/');
+    mainWindow.loadURL('http://localhost:5000/');
   
 	// Open the DevTools.
 	//mainWindow.webContents.openDevTools();
